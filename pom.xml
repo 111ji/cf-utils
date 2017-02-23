@@ -8,11 +8,54 @@
     <packaging>jar</packaging>
 
     <name>cf-utils</name>
-    <url>http://maven.apache.org</url>
+    <url>https://github.com/111ji/cf-utils.git</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+
+    <distributionManagement>
+        <!--<repository>-->
+        <!--<id>thirdparty</id>-->
+        <!--<name>Local Nexus Repository</name>-->
+        <!--<url>http://maven.zzdl.com/nexus/content/repositories/thirdparty/</url>-->
+        <!--</repository>-->
+        <snapshotRepository>
+            <id>oss</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>oss</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <url>https://github.com/111ji/cf-utils</url>
+        <connection>scm:git:https://github.com/111ji/cf-utils.git</connection>
+        <developerConnection>http://www.careerforce.cn</developerConnection>
+    </scm>
+    <developers>
+        <developer>
+            <name>conquerb</name>
+            <email>406002906@qq.com</email>
+            <organization>111ji</organization>
+        </developer>
+    </developers>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
 
     <dependencies>
 
@@ -150,14 +193,5 @@
         </plugins>
 
     </build>
-
-
-    <distributionManagement>
-        <repository>
-            <id>thirdparty</id>
-            <name>Local Nexus Repository</name>
-            <url>http://maven.zzdl.com/nexus/content/repositories/thirdparty/</url>
-        </repository>
-    </distributionManagement>
 
 </project>
